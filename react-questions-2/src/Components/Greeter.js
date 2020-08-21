@@ -24,7 +24,7 @@ function Display (props) {
 
 
 function Greeter () {
-    const [input, setInput] = useState()
+    const [input, setInput] = useState("User")
     const setText = (event) =>  setInput(event.target.value)
     
     return (
