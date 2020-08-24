@@ -29,13 +29,23 @@ function Button (props) {
 
 
 function Form () {
-    const [input, setInput] = useState("")
-    const setText = (event) =>  setInput(event.target.value)
-    const logToConsole = () => console.log(input)
+    const [nameInput, setNameInput] = useState("")
+    const setName = (event) =>  setNameInput(event.target.value)
+    
+    const [ageInput, setAgeInput] = useState("")
+    const setAge = (event) =>  setAgeInput(event.target.value)
+    
+    const [colourInput, setColourInput] = useState("")
+    const setColour = (event) =>  setColourInput(event.target.value)
+
+    const [foodInput, setFoodInput] = useState("")
+    const setFood = (event) =>  setFoodInput(event.target.value)
+    
+    const logToConsole = () => console.log(nameInput, ageInput, colourInput, foodInput)
 
    return (
        <>
-        <Input nameSetter={setText} ageSetter={setText} colourSetter={setText} foodSetter={setText}  />
+        <Input nameSetter={setName} ageSetter={setAge} colourSetter={setColour} foodSetter={setFood}  />
         <Button submit={logToConsole} />
        </>
    )
