@@ -4,6 +4,8 @@ import './App.css';
 import Counter from './Components/Counter.js'
 import Greeter from './Components/Greeter.js'
 import AlertButton from './Components/Alert.js'
+import Person from './Components/Person.js'
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Counter />
       <Greeter />
       <AlertButton />
+      <Person name={"Theo"} age={24} job={"Musician"} />
     </>
   );
 }
