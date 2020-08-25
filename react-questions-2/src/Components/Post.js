@@ -7,9 +7,13 @@ function Post (props) {
     return (
         <div>
             <p>{props.title}</p>
-            <img src={props.image} alt={props.altText} width={400} height={200} />
+            <img src={props.image} alt={props.altText} width={imageSize()} height={imageSize()/2} />
             <p>{props.content}</p>
         </div>
     )
+
+    function imageSize() {
+        return 400
+    }
 }
 
