@@ -10,23 +10,24 @@ function Boxes (props) {
   
     
 
-    const [clicker, setClicker] = useState("")
-    const clickHandler = () => setClicker("color")
+    const [clicker, setClicker] = useState('')
+    //const clickHandler = () => setClicker("color")
     
     const Display = () => {
-        const isClicked = true
+        const isClicked = clicker
+        if (isClicked.length!=0) {
         return (
             <div>
                 {isClicked ? <p style={{color: clicker}}>You clicked the {clicker} square.</p> : null}
             </div>
-        )
+        )} return null
     }
     return (
         <div>
-            <div onClick={clickHandler} style={{backgroundColor: 'red', width:100, height: 100}}></div>
-            <div onClick={clickHandler} style={{backgroundColor: 'blue', width:100, height: 100}}></div> 
-            <div onClick={clickHandler} style={{backgroundColor: 'green', width:100, height: 100}}></div>
-            <div onClick={clickHandler} style={{backgroundColor: 'purple', width:100, height: 100}}></div> 
+            <div onClick={() => setClicker('red')} style={{backgroundColor: 'red', width:100, height: 100}}></div>
+            <div onClick={() => setClicker('blue')} style={{backgroundColor: 'blue', width:100, height: 100}}></div> 
+            <div onClick={() => setClicker('green')} style={{backgroundColor: 'green', width:100, height: 100}}></div>
+            <div onClick={() => setClicker('purple')} style={{backgroundColor: 'purple', width:100, height: 100}}></div> 
             <Display />
         </div>
     )
