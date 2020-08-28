@@ -15,12 +15,11 @@ function Boxes (props) {
     
     const Display = () => {
         const isClicked = clicker
-        if (isClicked.length!=0) {
         return (
             <div>
-                {isClicked ? <p style={{color: clicker}}>You clicked the {clicker} square.</p> : null}
+                {isClicked.length!==0 ? <p style={{color: clicker}}>You clicked the {clicker} square.</p> : null}
             </div>
-        )} return null
+        ) 
     }
     return (
         <div>
