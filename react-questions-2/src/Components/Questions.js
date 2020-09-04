@@ -18,6 +18,7 @@ function Questions () {
     
     return (
        <div>
+           
             <p>Would you like to check this box?</p> 
             <p>Yes</p> <input type={'checkbox'} onClick={() => setAnswerOne('Yes')} />
             <p>No</p><input type={'checkbox'} onClick={() => setAnswerOne('No')} /> <br/>

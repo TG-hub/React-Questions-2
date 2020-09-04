@@ -10,6 +10,7 @@ import Post from './Components/Post.js'
 import Boxes from './Components/Boxes.js'
 import ImagePreview from './Components/ImagePreview.js'
 import Questions from './Components/Questions.js'
+import Posts from './Components/Posts.js'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Boxes /> 
       <ImagePreview />
       <Questions />
+      <Posts />
     </>
   );
 }
