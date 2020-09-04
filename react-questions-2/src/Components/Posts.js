@@ -3,9 +3,20 @@ import '../App.css'
 
 export default Posts
 
-function Posts (props) {
+function Posts () {
     
-    var postTitles = []
+    function Post (postContent) {
+                return (
+            <div>
+                <p>{postContent.title}</p>
+                <img src={postContent.image} width={100} height={100} />
+                <p>{postContent.content}</p>
+            </div>
+            )
+       }
+       
+    
+    
     const postContent = [
         {title: 'Javascript', content: 'Javascript is a scripting language ideal for building websites', image: 'https://miro.medium.com/max/720/1*LjR0UrFB2a__5h1DWqzstA.png'}, 
         {title: 'CSS', content: 'CSS is used to control the layout and styling of a webpage', image: 'https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png'}, 
@@ -17,13 +28,7 @@ function Posts (props) {
 
     return (
         <div>
-            {[postTitles = postContent.map((postContent => {return [<h1>{postContent.title}</h1>,<img src={postContent.image} width={100} height={100}/>,<p>{postContent.content}</p>]})) ]}
-            
+            {postContent.map(Post)}
         </div>
     ) 
-}
-
-    
-
-
-
+    }
