@@ -3,6 +3,7 @@ import '../App.css'
 import Post from './Post'
 import App from '../App'
 
+
 export default Posts
 
 function Posts (props) {
@@ -18,8 +19,8 @@ function Posts (props) {
        }*/
        
     return (
-        <div>
-            {props.postContent.map(Post)}
+       <div>
+           {props.postContent.map((props) => <Post title={props.title} image={props.image} content={props.content}  />)}
         </div>
     ) 
     }

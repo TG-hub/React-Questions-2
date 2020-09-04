@@ -20,7 +20,6 @@ const postContent = [
   {title: 'Jquery', content: 'Jquery is the old way we handled events on webpages and is not used often anymore', image: 'https://miro.medium.com/max/285/1*QR2SBNwG75LyY5uwqWpN3A.png'}
   ]
 
-
 function App() {
   return (
     <>
@@ -29,13 +28,14 @@ function App() {
       <AlertButton />
       <Person name={"Theo"} age={24} job={"Musician"} />
       <Form />
-      <Post title={"A Post About Jupiter", postContent.map.title} image={"https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23803.jpg", postContent.map.image} content={"This is a picture of the suface of Jupiter, the largest planet in our Solar System."} altText={"Jupiter's surface"} />
+      <Post title={["A Post About Jupiter", postContent.title]} image={"https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23803.jpg" } content={"This is a picture of the suface of Jupiter, the largest planet in our Solar System."} altText={"Jupiter's surface"} />
       <Boxes /> 
       <ImagePreview />
       <Questions />
-      <Posts postContent={postContent} />
+      <Posts postContent={postContent} title={postContent.title} image={postContent.image} content={postContent.content}/>
     </>
   );
 }
 
 export default App;
+
