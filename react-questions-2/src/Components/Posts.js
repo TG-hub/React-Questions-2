@@ -1,11 +1,12 @@
 import React from 'react'
 import '../App.css'
+import Post from './Post'
 
 export default Posts
 
 function Posts () {
     
-    function Post (postContent) {
+    /*function Post (postContent) {
                 return (
             <div>
                 <p>{postContent.title}</p>
@@ -13,7 +14,7 @@ function Posts () {
                 <p>{postContent.content}</p>
             </div>
             )
-       }
+       }*/
        
     
     
